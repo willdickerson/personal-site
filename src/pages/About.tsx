@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-12">
+    <div className="flex flex-col md:flex-row items-center gap-12">
       <div className="flex-shrink-0">
         <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-dark">
           <img 
