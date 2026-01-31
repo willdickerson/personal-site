@@ -31,6 +31,12 @@ export function Layout({ children }: LayoutProps) {
           <span>© {new Date().getFullYear()}</span>
           <div className="flex items-center gap-6">
             <a 
+              href="mailto:hello@willdickerson.net"
+              className="hover:text-dark transition-colors"
+            >
+              contact
+            </a>
+            <a 
               href="https://github.com/willdickerson" 
               target="_blank" 
               rel="noopener noreferrer"
