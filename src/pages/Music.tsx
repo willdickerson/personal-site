@@ -17,7 +17,7 @@ export function Music() {
           >
             Blue Dot Swing
           </a>
-          , a jazz and swing band based in Austin.
+          , a jazz band based in Austin.
         </p>
       </div>
 
