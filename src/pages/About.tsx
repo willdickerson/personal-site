@@ -2,7 +2,7 @@ export function About() {
   return (
     <div className="flex flex-col md:flex-row items-center gap-12">
       <div className="flex-shrink-0">
-        <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-dark">
+        <div className="w-40 h-40 rounded-full overflow-hidden border-[3px] border-dark">
           <img 
             src="/photo-256.webp" 
             srcSet="/photo-256.webp 1x, /photo-512.webp 2x"
