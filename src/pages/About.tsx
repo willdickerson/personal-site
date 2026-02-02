@@ -4,7 +4,8 @@ export function About() {
       <div className="flex-shrink-0">
         <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-dark">
           <img 
-            src="/photo.png" 
+            src="/photo-256.webp" 
+            srcSet="/photo-256.webp 1x, /photo-512.webp 2x"
             alt="Will Dickerson" 
             className="w-full h-full object-cover"
           />
