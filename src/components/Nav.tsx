@@ -13,9 +13,6 @@ export function Nav() {
       <NavLink to="/" className={linkClass} end>
         about
       </NavLink>
-      <NavLink to="/projects" className={linkClass}>
-        projects
-      </NavLink>
       <NavLink to="/music" className={linkClass}>
         music
       </NavLink>

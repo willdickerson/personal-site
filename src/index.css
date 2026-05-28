@@ -2,15 +2,16 @@
 
 /* Custom theme extending Tailwind */
 @theme {
-  /* Color palette from chord-flow */
-  --color-gold: #E3B448;
+  /* Color palette */
+  --color-gold: #E0AE3E;
   --color-cream: #F5E6D3;
-  --color-brown: #846C5B;
-  --color-dark: #2C1810;
+  --color-brown: #6E521E;
+  --color-dark: #241404;
   --color-sage: #A6B39C;
-  
-  /* Font family */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Font families */
+  --font-sans: 'Archivo', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 /* Base styles */
@@ -51,8 +52,7 @@ body::before {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
+  letter-spacing: -0.02em;
   line-height: 1.2;
   margin: 0;
 }
@@ -94,6 +94,6 @@ a:hover {
 
 /* Selection */
 ::selection {
-  background-color: var(--color-sage);
-  color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-gold);
 }
