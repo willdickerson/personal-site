@@ -10,8 +10,11 @@ export function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="py-8 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <a href="/" className="text-lg font-semibold tracking-wide text-dark hover:text-brown transition-colors">
+        <div className="max-w-4xl mx-auto flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <a
+            href="/"
+            className="text-lg font-semibold tracking-wide text-dark hover:text-brown transition-colors whitespace-nowrap"
+          >
             will dickerson
           </a>
           <Nav />
@@ -19,34 +22,34 @@ export function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 px-6 md:px-12 py-12">
-        <div className="max-w-4xl mx-auto">
+      <main className="flex-1 px-6 md:px-12 py-12 flex flex-col">
+        <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
           {children}
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="py-8 px-6 md:px-12 border-t-2 border-dark">
-        <div className="max-w-4xl mx-auto flex items-center justify-between text-sm text-brown">
-          <span>© {new Date().getFullYear()}</span>
+      <footer className="py-8 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto pt-8 border-t border-dark/[0.18] flex items-center justify-between font-mono text-xs text-brown">
+          <span>© {new Date().getFullYear()} will dickerson</span>
           <div className="flex items-center gap-6">
-            <a 
+            <a
               href="mailto:hello@willdickerson.net"
               className="hover:text-dark transition-colors"
             >
               contact
             </a>
-            <a 
-              href="https://github.com/willdickerson" 
-              target="_blank" 
+            <a
+              href="https://github.com/willdickerson"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-dark transition-colors"
             >
               github
             </a>
-            <a 
-              href="https://www.linkedin.com/in/will-dickerson/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/will-dickerson/"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-dark transition-colors"
             >
