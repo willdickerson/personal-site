@@ -10,7 +10,7 @@ export function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="py-8 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-4xl mx-auto flex flex-row items-center justify-between gap-4">
           <a
             href="/"
             className="text-lg font-semibold tracking-wide text-dark hover:text-brown transition-colors whitespace-nowrap"
@@ -22,7 +22,7 @@ export function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 px-6 md:px-12 py-12 flex flex-col">
+      <main className="flex-1 px-6 md:px-12 py-8 md:py-12 flex flex-col">
         <div className="max-w-4xl mx-auto w-full flex-1 flex flex-col">
           {children}
         </div>
@@ -30,12 +30,12 @@ export function Layout({ children }: LayoutProps) {
 
       {/* Footer */}
       <footer className="py-8 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto pt-8 border-t border-dark/[0.18] flex items-center justify-between font-mono text-xs text-brown">
+        <div className="max-w-4xl mx-auto pt-8 border-t border-dark/[0.18] font-mono text-xs text-brown flex flex-col gap-2 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-6 md:gap-y-2">
           <span>© {new Date().getFullYear()} will dickerson</span>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-6">
             <a
               href="mailto:hello@willdickerson.net"
-              className="hover:text-dark transition-colors"
+              className="inline-flex items-center min-h-[44px] hover:text-dark transition-colors"
             >
               contact
             </a>
@@ -43,7 +43,7 @@ export function Layout({ children }: LayoutProps) {
               href="https://github.com/willdickerson"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-dark transition-colors"
+              className="inline-flex items-center min-h-[44px] hover:text-dark transition-colors"
             >
               github
             </a>
@@ -51,7 +51,7 @@ export function Layout({ children }: LayoutProps) {
               href="https://www.linkedin.com/in/will-dickerson/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-dark transition-colors"
+              className="inline-flex items-center min-h-[44px] hover:text-dark transition-colors"
             >
               linkedin
             </a>
