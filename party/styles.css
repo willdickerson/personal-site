@@ -1,0 +1,208 @@
+* { box-sizing: border-box; }
+
+html { min-height: 100%; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 22px 10px 50px;
+  overflow-x: hidden;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", cursive;
+  background: #70ffff url("./background.gif") center / cover fixed;
+  color: #0000cc;
+  text-align: center;
+}
+
+.page {
+  width: min(680px, 96vw);
+  margin: 0 auto;
+  padding: 16px 18px 24px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 8px ridge #00ff00;
+  outline: 5px dashed #ff00ff;
+  box-shadow: 0 0 0 10px #ffff00, 14px 14px 0 rgba(0, 0, 255, 0.55);
+}
+
+.warning {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #ff0000;
+  border: 4px outset #ffff00;
+  color: #ffff00;
+  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 900;
+}
+
+h1 {
+  margin: 20px 0 4px;
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  font-size: clamp(54px, 13vw, 105px);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.rainbow {
+  color: #ff00ff;
+  -webkit-text-stroke: 2px #0000ff;
+  text-shadow:
+    4px 4px 0 #ffff00,
+    8px 8px 0 #00ff00,
+    12px 12px 0 #00ffff,
+    16px 16px 0 #ff0000;
+}
+
+.spin {
+  display: inline-block;
+  margin-left: 12px;
+  color: #ffff00;
+  -webkit-text-stroke: 2px #ff0000;
+  animation: spin 2s linear infinite;
+}
+
+h2 {
+  margin: 28px 0 14px;
+  padding: 8px;
+  color: #ff0000;
+  background: #00ffff;
+  border: 4px double #0000ff;
+  font-size: clamp(20px, 5vw, 32px);
+  text-shadow: 2px 2px #ffff00;
+}
+
+marquee {
+  display: block;
+  margin: 12px 0 20px;
+  padding: 10px;
+  color: #00ff00;
+  background: #000;
+  border: 5px inset #ff00ff;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.schedule {
+  padding: 8px;
+  background: rgba(255, 255, 0, 0.55);
+  border: 6px groove #ff00ff;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px 8px;
+  color: inherit;
+  background: #fff;
+  border: 4px outset #00ffff;
+  text-align: left;
+  text-decoration: none;
+}
+
+.event:nth-child(even) {
+  background: #e8ff85;
+  transform: rotate(0.35deg);
+}
+
+.event:nth-child(odd) {
+  transform: rotate(-0.35deg);
+}
+
+.event[href]:hover {
+  color: #ff0000;
+  background: #00ffff;
+  border-style: inset;
+}
+
+.time {
+  color: #ff0000;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 23px;
+  white-space: nowrap;
+  text-shadow: 1px 1px #ffff00;
+}
+
+.thing {
+  color: #0000cc;
+  font-size: clamp(17px, 3.7vw, 22px);
+  font-weight: 900;
+}
+
+.juice {
+  display: inline-block;
+  margin: 20px 0 12px;
+  padding: 6px 11px;
+  color: #006400;
+  background: #7cff00;
+  border: 3px dashed #006400;
+  text-decoration: none;
+  transform: rotate(1deg);
+}
+
+.juice:hover {
+  color: #fff;
+  background: #006400;
+}
+
+.rsvp {
+  margin: 8px auto 18px;
+  padding: 10px;
+  color: #fff;
+  background: #ff00ff;
+  border: 5px ridge #00ffff;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.counter {
+  margin-top: 12px;
+  font-family: "Courier New", monospace;
+  color: #000;
+  font-weight: bold;
+}
+
+.counter span {
+  display: inline-block;
+  padding: 3px 8px;
+  color: #00ff00;
+  background: #000;
+  border: 3px inset #aaa;
+  letter-spacing: 4px;
+}
+
+.stars {
+  position: fixed;
+  top: 12%;
+  z-index: -1;
+  color: #ff00ff;
+  font-size: clamp(38px, 7vw, 80px);
+  line-height: 1.4;
+  text-shadow: 4px 4px #ffff00;
+  animation: float 1.5s ease-in-out infinite alternate;
+}
+
+.stars-left { left: 1vw; }
+.stars-right { right: 1vw; animation-delay: -0.7s; }
+
+.blink { animation: blink 0.72s steps(1, end) infinite; }
+
+@keyframes blink { 50% { visibility: hidden; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes float { to { transform: translateY(28px) rotate(8deg); } }
+
+@media (max-width: 560px) {
+  body { padding-top: 12px; }
+  .page { padding: 12px 10px 20px; border-width: 5px; }
+  .event { grid-template-columns: 94px 1fr; gap: 7px; padding: 9px 6px; }
+  .time { font-size: 19px; }
+  .stars { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink, .spin, .stars { animation: none; }
+  marquee { overflow: hidden; white-space: nowrap; }
+}
