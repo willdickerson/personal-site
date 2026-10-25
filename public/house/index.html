@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>House Walkthrough</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0c0c0c; color: #f2f0ec;
+      font: 15px/1.5 system-ui, -apple-system, sans-serif; -webkit-user-select: none; user-select: none; }
+    canvas { display: block; }
+    #overlay { position: fixed; inset: 0; display: grid; place-items: center; cursor: pointer; text-align: center;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,.25), rgba(0,0,0,.6)); transition: opacity .35s; }
+    #overlay.hidden { opacity: 0; pointer-events: none; }
+    #overlay > div { padding: 0 16px; }
+    #progress { font-size: 18px; letter-spacing: .02em; }
+    #hint { margin-top: 10px; font-size: 13px; opacity: .6; }
+  </style>
+  <script type="module" crossorigin src="/house/assets/index-E4Faui2P.js"></script>
+</head>
+<body>
+  <div id="overlay">
+    <div>
+      <div id="progress">Loading…</div>
+      <div id="hint">WASD to move · mouse to look · Shift to hurry · Esc to pause</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+[
+ {
+  "index": 0,
+  "cls": "int",
+  "objects": 94,
+  "size": 4096,
+  "fill": 0.96
+ },
+ {
+  "index": 1,
+  "cls": "int",
+  "objects": 137,
+  "size": 4096,
+  "fill": 1.0
+ },
+ {
+  "index": 2,
+  "cls": "int",
+  "objects": 78,
+  "size": 4096,
+  "fill": 0.91
+ },
+ {
+  "index": 3,
+  "cls": "int",
+  "objects": 3,
+  "size": 4096,
+  "fill": 0.78
+ },
+ {
+  "index": 4,
+  "cls": "int",
+  "objects": 26,
+  "size": 4096,
+  "fill": 0.99
+ },
+ {
+  "index": 5,
+  "cls": "int",
+  "objects": 84,
+  "size": 4096,
+  "fill": 0.97
+ },
+ {
+  "index": 6,
+  "cls": "int",
+  "objects": 207,
+  "size": 4096,
+  "fill": 1.0
+ },
+ {
+  "index": 7,
+  "cls": "int",
+  "objects": 95,
+  "size": 4096,
+  "fill": 0.43
+ },
+ {
+  "index": 8,
+  "cls": "ext",
+  "objects": 40,
+  "size": 2048,
+  "fill": 0.18
+ },
+ {
+  "index": 9,
+  "cls": "far",
+  "objects": 14,
+  "size": 2048,
+  "fill": 0.19
+ }
+]
