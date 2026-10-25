@@ -15,7 +15,7 @@
     #progress { font-size: 18px; letter-spacing: .02em; }
     #hint { margin-top: 10px; font-size: 13px; opacity: .6; }
   </style>
-  <script type="module" crossorigin src="/house/assets/index-D2tNoQ3I.js"></script>
+  <script type="module" crossorigin src="/house/assets/index-DHrlcm0N.js"></script>
 </head>
 <body>
   <div id="overlay">
@@ -25,9 +25,17 @@
     </div>
   </div>
   <script>
-    // right hint from the first frame (phones get the arrow pad), not only once the house has loaded
-    if (matchMedia('(pointer: coarse)').matches)
-      document.getElementById('hint').textContent = 'Arrow pad to walk and turn · drag to look around';
+    // phone navigation mode (?nav=pad|tap|tour to compare; tour won the persona QA, see qa/findings.md), and the
+    // right hint from the first frame
+    if (matchMedia('(pointer: coarse)').matches) {
+      const nav = new URLSearchParams(location.search).get('nav') || 'tour';
+      document.documentElement.dataset.nav = nav;
+      document.getElementById('hint').textContent = {
+        pad: 'Arrow pad to walk and turn · drag to look around',
+        tap: 'Tap the floor to walk there · drag to look around',
+        tour: 'Pick a room below, or tap the floor to walk there · drag to look around',
+      }[nav] ?? '';
+    }
   </script>
 </body>
 </html>
